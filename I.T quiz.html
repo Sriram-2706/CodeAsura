@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin: 0 auto;
+            width: 50%;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f2f2f2;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="submit"] {
+            display: block;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <form id="quiz-form">
+        
+        <label for="q1">1. What does "IT" stand for?</label>
+        <input type="radio" name="q1" value="a">International Technology<br>
+        <input type="radio" name="q1" value="b">Information Technology<br>
+        <input type="radio" name="q1" value="c">Innovative Techniques<br>
+        <input type="radio" name="q1" value="d">Intelligent Thinking<br>
+        
+        <label for="q2">2. What is the smallest unit of digital information?</label>
+        <input type="radio" name="q2" value="a">Byte<br>
+        <input type="radio" name="q2" value="b">Bit<br>
+        <input type="radio" name="q2" value="c">Kilobyte<br>
+        <input type="radio" name="q2" value="d">Megabyte<br>
+        
+        <label for="q3">3. What is the process of converting data into a coded form called?</label>
+        <input type="radio" name="q3" value="a">Encryption<br>
+        <input type="radio" name="q3" value="b">Compression<br>
+        <input type="radio" name="q3" value="c">Decryption<br>
+        <input type="radio" name="q3" value="d">Decompression<br>
+        
+        <label for="q4">4. What is the term used to describe a collection of related information organized for rapid search and retrieval?</label>
+        <input type="radio" name="q4" value="a">Database<br>
+        <input type="radio" name="q4" value="b">Spreadsheet<br>
+        <input type="radio" name="q4" value="c">Presentation<br>
+        <input type="radio" name="q4" value="d">Document<br>
+        
+        <label for="q5">5. Which of the following is not a programming language?</label>
+        <input type="radio" name="q5" value="a">Python<br>
+        <input type="radio" name="q5" value="b">Java<br>
+        <input type="radio" name="q5" value="c">HTML<br>
+        <input type="radio" name="q5" value="d">CSS<br>
+       
+        <label for="q6">6. Which of the following is a computer network that covers a large geographical area?</label>
+        <input type="radio" name="q6" value="a">LAN<br>
+        <input type="radio" name="q6" value="b">WAN<br>
+        <input type="radio" name="q6" value="c">MAN<br>
+        <input type="radio" name="q6" value="d">VPN<br>
+        
+        
+        <label for="q7">7. Which of the following is not an operating system?</label>
+        <input type="radio" name="q7" value="a">Windows<br>
+        <input type="radio" name="q7" value="b">Linux<br>
+        <input type="radio" name="q7" value="c">MacOS<br>
+        <input type="radio" name="q7" value="d">Microsoft Office<br>
+        
+        
+        <label for="q8">8. Which of the following is used to convert a high-level programming language to machine code?</label>
+        <input type="radio" name="q8" value="a">Compiler<br>
+        <input type="radio" name="q8" value="b">Interpreter<br>
+        <input type="radio" name="q8" value="c">Assembler<br>
+        <input type="radio" name="q8" value="d">Debugger<br>
+        
+        
+        <label for="q9">9. Which of the following is a programming paradigm that emphasizes the use of a small set of simple, interchangeable functions?</label>
+        <input type="radio" name="q9" value="a">Object-oriented programming<br>
+        <input type="radio" name="q9" value="b">Functional programming<br>
+        <input type="radio" name="q9" value="c">Procedural programming<br>
+        <input type="radio" name="q9" value="d">Event-driven programming<br>
+        
+       
+        <label for="q10">10. Which of the following is a type of cyber attack that involves sending a large amount of traffic to a server or network in an attempt to overwhelm it?</label>
+        <input type="radio" name="q10" value="a">Phishing<br>
+        <input type="radio" name="q10" value="b">Malware<br>
+        <input type="radio" name="q10" value="c">Denial-of-service<br>
+        <input type="radio" name="q10" value="d">Spoofing<br>
+        
+ 
+
+        <input type="submit" value="Submit" onclick="checkAnswers(event)">
+    </form>
+
+    <script>
+    function checkAnswers(event) {
+    event.preventDefault();
+    var form = document.getElementById("quiz-form");
+    var score = 0;
+
+     var q1 = form.elements["q1"].value;
+    if (q1 === "b") {
+        score++;
+    }
+
+    var q2 = form.elements["q2"].value;
+    if (q2 === "b") {
+        score++;
+    }
+
+    var q3 = form.elements["q3"].value;
+    if (q3 === "a") {
+        score++;
+    }
+
+    var q4 = form.elements["q4"].value;
+    if (q4 === "a") {
+        score++;
+    }
+
+    var q5 = form.elements["q5"].value;
+    if (q5 === "c") {
+        score++;
+    }
+
+    var q6 = form.elements["q6"].value;
+    if (q6 === "b") {
+        score++;
+    }
+
+    var q7 = form.elements["q7"].value;
+    if (q7 === "d") {
+        score++;
+    }
+
+    var q8 = form.elements["q8"].value;
+    if (q8 === "a") {
+        score++;
+    }
+
+    var q9 = form.elements["q9"].value;
+    if (q9 === "b") {
+        score++;
+    }
+
+    var  = form.elements["q10"].value;
+    if (q10 === "d") {
+        score++;
+    }
+
+    alert("You scored " + score + " out of 10");
+  }
+  </script>
