@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    }
+    h1 {
+    text-align: center;
+    }
+    form {
+    margin: 0 auto;
+    width: 50%;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    }
+    label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+    input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    input[type="radio"] {
+    margin-right: 10px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <form id="quiz-form">
+        <label for="question1">1. What is the main ingredient in guacamole?</label>
+        <input type="radio" name="question1" value="a">a. Tomatoes<br>
+        <input type="radio" name="question1" value="b">b. Avocados<br>
+        <input type="radio" name="question1" value="c">c. Cilantro<br>
+        
+        <label for="question2">2. What is a roux?</label>
+        <input type="radio" name="question2" value="a">a. A type of bread<br>
+        <input type="radio" name="question2" value="b">b. A mixture of flour and fat used to thicken sauces<br>
+        <input type="radio" name="question2" value="c">c. A French dessert<br>
+        
+        <label for="question3">3. What is the national dish of Italy?</label>
+        <input type="radio" name="question3" value="a">a. Pizza<br>
+        <input type="radio" name="question3" value="b">b. Tiramisu<br>
+        <input type="radio" name="question3" value="c">c. Spaghetti alla Carbonara<br>
+        
+        <label for="question4">4. What is a bechamel sauce?</label>
+        <input type="radio" name="question4" value="a">a. A spicy sauce made with chilies<br>
+        <input type="radio" name="question4" value="b">b. A white sauce made with milk, butter, and flour<br>
+        <input type="radio" name="question4" value="c">c. A French dessert made with custard and caramel<br>
+        
+        <label for="question5">5. What is the main ingredient in hummus?</label>
+        <input type="radio" name="question5" value="a">a. Chickpeas<br>
+        <input type="radio" name="question5" value="b">b. Lentils<br>
+        <input type="radio" name="question5" value="c">c. Black beans<br>
+        
+        
+        <label for="question6">6. What is the Maillard reaction?</label>
+        <input type="radio" name="question6" value="a">a. A chemical reaction between amino acids and reducing sugars that results in the brown color and complex flavors of cooked foods<br>
+        <input type="radio" name="question6" value="b">b. A type of microbial spoilage that causes food to emit a foul odor and flavor<br>
+        <input type="radio" name="question6" value="c">c. A cooking method where food is slowly cooked in hot liquid for an extended period of time<br>
+        
+        <label for="question7">7. What is umami?</label>
+        <input type="radio" name="question7" value="a">a. A sweet taste sensation often associated with sugary foods<br>
+        <input type="radio" name="question7" value="b">b. A savory taste sensation often described as meaty or brothy<br>
+        <input type="radio" name="question7" value="c">c. A sour taste sensation often associated with citrus fruits and vinegar<br>
+        
+        <label for="question8">8. What is a souffle?</label>
+        <input type="radio" name="question8" value="a">a. A type of meat stew originating from France<br>
+        <input type="radio" name="question8" value="b">b. A type of dessert made with a base of egg yolks and whipped egg whites that results in a light and airy texture<br>
+        <input type="radio" name="question8" value="c">c. A type of bread typically served with soup or stew<br>
+        
+        <label for="question9">9. What is sous-vide cooking?</label>
+        <input type="radio" name="question9" value="a">a. A method of cooking where food is placed in a vacuum-sealed bag and cooked in a temperature-controlled water bath<br>
+        <input type="radio" name="question9" value="b">b. A type of stir-fry cooking popular in Southeast Asia<br>
+        <input type="radio" name="question9" value="c">c. A method of cooking where food is cooked quickly over high heat<br>
+        
+        <label for="question10">10. What is a gastrique?</label>
+        <input type="radio" name="question10" value="a">a. A type of French sauce made with cream and butter<br>
+        <input type="radio" name="question10" value="b">b. A sweet and sour sauce made with vinegar and sugar that is used to flavor savory dishes<br>
+        <input type="radio" name="question10" value="c">c. A type of soup commonly served in Eastern Europe<br>
+        
+        
+        <input type="submit" value="Submit" onclick="checkAnswers(event)">
+    </form>
+</body>
+<script>
+function checkAnswers(event) {
+    event.preventDefault();
+    var form = document.getElementById("quiz-form");
+    var score = 0;
+    
+    var question1 = form.elements["question1"].value;
+    if (question1 === "b") {
+        score++;
+    }
+    
+    var question2 = form.elements["question2"].value;
+    if (question2 === "b") {
+        score++;
+    }
+    
+    var question3 = form.elements["question3"].value;
+    if (question3 === "c") {
+        score++;
+    }
+    
+    var question4 = form.elements["question4"].value;
+    if (question4 === "b") {
+        score++;
+    }
+    
+    var question5 = form.elements["question5"].value;
+    if (question5 === "a") {
+        score++;
+    }
+    
+    var question6 = form.elements["question6"].value;
+    if (question6 === "a") {
+        score++;
+    }
+    
+    var question7 = form.elements["question7"].value;
+    if (question7 === "b") {
+        score++;
+    }
+    
+    var question8 = form.elements["question8"].value;
+    if (question8 === "b") {
+        score++;
+    }
+    
+    var question9 = form.elements["question9"].value;
+    if (question9 === "a") {
+        score++;
+    }
+    
+    var question10 = form.elements["question10"].value;
+    if (question10 === "b") {
+        score++;
+    }
+    
+    alert("You scored " + score + " out of 10");
+}
+
+
+</script>
+</html>
