@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq-m4mVBzXPv4T9vpptfrlbL48NZfrHMlfokAvt3OQLpOebngtSLbbwQ0i27lpBwjIfNA&usqp=CAU");
+    background-size: 283px 179px;
+  }
+  
+  .weather-container {
+    background-color: #39ff14;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #weatherInfo {
+    margin-top: 20px;
+  }
+  
+  /* Style the chart canvas */
+  #forecastChart {
+    max-width: 100%;
+    width: 250 px;
+    height: 200px;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Add a border for separation */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
